@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title & Basic SEO -->
+  <title>Chat with PhantomPlay - Horror Comedy AI</title>
+  <meta name="description"
+    content="Chat with PhantomPlay, your spooky yet hilarious AI companion. Ask questions, get eerie answers, and enjoy a mix of horror and comedy." />
+  <meta name="keywords"
+    content="PhantomPlay, spooky chatbot, horror comedy AI, scary funny stories, haunted chat, AI humor" />
+  <meta name="author" content="Your Name or Brand" />
+
+  <!-- Open Graph (for social sharing) -->
+  <meta property="og:title" content="Chat with PhantomPlay - Horror Comedy AI" />
+  <meta property="og:description"
+    content="A haunted chatbot that blends spooky vibes with comedy. Dare to chat with PhantomPlay!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com" />
+  <meta property="og:image" content="https://yourwebsite.com/phantomplay-preview.png" />
+
+  <!-- Twitter Card (for Twitter/X sharing) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chat with PhantomPlay - Horror Comedy AI" />
+  <meta name="twitter:description"
+    content="SpookyBuddy has a cousin... PhantomPlay! A horror-comedy chatbot that entertains and spooks you." />
+  <meta name="twitter:image" content="https://yourwebsite.com/phantomplay-preview.png" />
+
+
+  <link href="styles.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/333889fa25.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="notification-block" class="notification-block">
+      <span id="notification-text"></span>
+    </div>
+    <div id="header">
+      <h2 id="heading"><span class="white">Phanto</span><span class="red">mPlay</span></h2>
+      <div id="logout" class="logout">
+        <button id="logout-btn" class="logout-btn" title="Logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+      </div>
+    </div>
+
+
+    <div id="chat-box">
+      <div id="placeholder">What haunts your mind?</div>
+      <div id="typing-bubble" class="message bot typing">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <form id="chat-form">
+      <input type="text" id="user_input" placeholder="Say something…" maxlength="500" />
+      <button type="submit" id="send-btn">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+
+    <!-- Login Modal -->
+    <div id="login-modal-backdrop" class="modal-backdrop hidden">
+      <div id="login-modal" class="modal">
+        <button type="button" id="login-modal-close" class="modal-close" aria-label="Close modal">✕</button>
+        <h2 class="modal-title">
+          <span class="white">Phanto</span><span class="red">mPlay</span>
+        </h2>
+        <p class="modal-subtitle" id="login-msg">Sign in or continue as a guest to start chatting!</p>
+        <form id="login-form" class="modal-form">
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input type="password" id="login-password" placeholder="Password" required />
+          <button type="submit" class="modal-btn">Sign In</button>
+        </form>
+        <button id="login-guest-btn" class="modal-btn guest">Continue as Guest</button>
+        <p class="signup-text">
+          Don’t have an account?
+          <a href="" id="open-signup">Create New Account</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-modal-backdrop" class="modal-backdrop hidden">
+      <div id="signup-modal" class="modal">
+        <button type="button" id="modal-close" class="modal-close" aria-label="Close modal">✕</button>
+        <h2 class="modal-title">
+          <span class="white">Phanto</span><span class="red">mPlay</span>
+        </h2>
+        <p class="modal-subtitle" id="signup-msg">Sign Up or continue as a guest to start chatting!</p>
+        <form id="signup-form" class="modal-form">
+          <input type="text" id="signup-username" placeholder="Name" required />
+          <input type="email" id="signup-email" placeholder="Email" required />
+          <input type="password" id="signup-password" placeholder="Password" required />
+          <button type="submit" class="modal-btn">Sign Up</button>
+        </form>
+        <button id="signup-guest-btn" class="modal-btn guest">Continue as Guest</button>
+        <p class="login-text">
+          Have an account?
+          <a href="" id="open-login">Sign In</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+
+</html>
