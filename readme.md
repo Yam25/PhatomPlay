@@ -12,14 +12,14 @@ The chatbot is built with **FastAPI, LangChain, and Google Generative AI**, feat
 ---
 
 ## ✨ Features  
-- 🔹 **Guest Access** → Try the chatbot without creating an account.  
-- 🔹 **User Authentication** → Signup/Login with secure password hashing.  
-- 🔹 **Persistent Memory** → Logged-in users get conversation history stored in SQL.  
-- 🔹 **Temporary Memory** → Guest users have in-memory chat that resets.  
-- 🔹 **Multi-user Support** → Multiple users can chat simultaneously (current DB works, but not yet optimized for scale).  
-- 🔹 **LLM Integration** → Context-aware, natural conversations with Google GenAI.  
-- 🔹 **UI/UX** → Modals for login/signup, responsive chat interface.  
-- 🔹 **Local Hosting** → Runs on `localhost` with FastAPI (deployment-ready).  
+-  **Guest Access** → Try the chatbot without creating an account.  
+-  **User Authentication** → Signup/Login with secure password hashing.  
+-  **Persistent Memory** → Logged-in users get conversation history stored in SQL.  
+-  **Temporary Memory** → Guest users have in-memory chat that resets.  
+-  **Multi-user Support** → Multiple users can chat simultaneously (current DB works, but not yet optimized for scale).  
+-  **LLM Integration** → Context-aware, natural conversations with Google GenAI.  
+-  **UI/UX** → Modals for login/signup, responsive chat interface.  
+-  **Local Hosting** → Runs on `localhost` with FastAPI (deployment-ready).  
 
 ---
 
