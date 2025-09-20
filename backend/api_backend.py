@@ -4,7 +4,7 @@ import traceback
 
 from dotenv import load_dotenv
 from pydantic import BaseModel
-from backend.database import add_user, check_email_duplicates, get_session_id, verify_password
+from database import add_user, check_email_duplicates, get_session_id, verify_password
 from sqlalchemy import create_engine
 
 from fastapi import FastAPI,Response,Request
@@ -28,7 +28,7 @@ engine = create_engine("sqlite:///chat_history.db")
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://didactic-space-happiness-5w7j9497qv737v76-5500.app.github.dev"],  
+    allow_origins=["http://127.0.0.1:5500"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

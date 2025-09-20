@@ -1,13 +1,3 @@
-// Learn how its done JS and CSS and map HTML 
-// responsive - mobile,ipad and laptop
-// ADDED TO RESUME 
-// 7 DAYS RETENTION POLICY FOR PERSISTENT MEMORY .
-// EVERYDAY RELOAD GUEST SESSION SO TEMP MEMORY IS GONE
-// show texts of past convo in UI after refresh for users from backend .
-// show texts on past convo in UI after reload/ refresh for guest from backend (optional)
-// add left menu for chats to maintain for previous chats and new chat btn (optional)
-// web search for latest horror related stuffs 
-// check for errors  
 const form = document.getElementById("chat-form");
 const input = document.getElementById("user_input");
 const chatBox = document.getElementById("chat-box");
@@ -100,7 +90,7 @@ const showMessage = (response) => {
 
 const fetchGuestResponse = async (text,guestSessionId) => {
 try {
-        let res = await fetch("https://didactic-space-happiness-5w7j9497qv737v76-8000.app.github.dev/guest-chat", {
+        let res = await fetch("http://127.0.0.1:8000/guest-chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -132,7 +122,7 @@ try {
 
 const fetchResponse = async (text) => {
     try {
-        let res = await fetch("https://didactic-space-happiness-5w7j9497qv737v76-8000.app.github.dev/chat", {
+        let res = await fetch("http://127.0.0.1:8000/chat", {
             method: "POST",
             credentials: "include",
             headers: {
@@ -163,7 +153,7 @@ const fetchResponse = async (text) => {
 
 const checkSession = async () => {
        try{
-            let response =  await fetch("https://didactic-space-happiness-5w7j9497qv737v76-8000.app.github.dev/check-session",{
+            let response =  await fetch("http://127.0.0.1:8000/check-session",{
                 method: "GET",
                 credentials: "include"
             });
@@ -202,7 +192,7 @@ signupForm.addEventListener("submit", async (e) => {
     }
 
          try{
-            let response =  await fetch("https://didactic-space-happiness-5w7j9497qv737v76-8000.app.github.dev/sign-up",{
+            let response =  await fetch("http://127.0.0.1:8000/sign-up",{
                 method: "POST",
                 credentials: "include",            
                 headers: {
@@ -241,7 +231,7 @@ document.getElementById("logout-btn").addEventListener("click", async (e) => {
                 openLoginModal();
                 return; 
         }
-            let response =  await fetch("https://didactic-space-happiness-5w7j9497qv737v76-8000.app.github.dev/logout",{
+            let response =  await fetch("http://127.0.0.1:8000/logout",{
                 method: "DELETE",
                 credentials: "include"
             });
@@ -271,7 +261,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     return;
     }
         try{
-            let response =  await fetch("https://didactic-space-happiness-5w7j9497qv737v76-8000.app.github.dev/sign-in",{
+            let response =  await fetch("http://127.0.0.1:8000/sign-in",{
                 method: "POST",
                 credentials: "include",            
                 headers: {
